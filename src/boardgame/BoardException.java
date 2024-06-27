@@ -1,2 +1,9 @@
-package boardgame;public class BoardException {
+package boardgame;
+
+public class BoardException extends RuntimeException {
+
+    public BoardException(String msg) {
+        super(msg);
+    }
+
 }
