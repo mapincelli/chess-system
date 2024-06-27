@@ -24,15 +24,19 @@ public class ChessMatch {
         return mat;
     }
 
+    private void placeNewPiece(char column, int row, ChessPiece piece){
+        board.placePiece(piece, new ChessPosition(column,row).toPosition());
+    }
+
     public void initialSetup() {
         //WHITE side
-        board.placePiece(new Tower(board, Color.WHITE), new Position(0, 0));
-        board.placePiece(new Tower(board, Color.WHITE), new Position(0, 7));
-        board.placePiece(new King(board, Color.WHITE), new Position(0, 4));
+        placeNewPiece('a',1 ,new Tower(board, Color.WHITE));
+        placeNewPiece('h', 1, new Tower(board, Color.WHITE));
+        placeNewPiece('d', 1, new King(board, Color.WHITE));
 
         //BLACK side
-        board.placePiece(new Tower(board, Color.BLACK), new Position(7, 0));
-        board.placePiece(new Tower(board, Color.BLACK), new Position(7, 7));
-        board.placePiece(new King(board, Color.BLACK), new Position(7, 3));
+        placeNewPiece('a',8 ,new Tower(board, Color.BLACK));
+        placeNewPiece('h', 8, new Tower(board, Color.BLACK));
+        placeNewPiece('e', 8, new King(board, Color.BLACK));
     }
 }
