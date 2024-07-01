@@ -3,6 +3,7 @@ package chess;
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
+import chess.pieces.Bishop;
 import chess.pieces.King;
 import chess.pieces.Pawn;
 import chess.pieces.Tower;
@@ -205,6 +206,8 @@ public class ChessMatch {
         placeNewPiece('f' ,2 , new Pawn(board,Color.WHITE));
         placeNewPiece('g' ,2 , new Pawn(board,Color.WHITE));
         placeNewPiece('h' ,2 , new Pawn(board,Color.WHITE));
+        placeNewPiece('c', 1 , new Bishop(board, Color.WHITE));
+        placeNewPiece('f', 1 , new Bishop(board, Color.WHITE));
 
         //BLACK side
         placeNewPiece('a' ,8 , new Tower(board,Color.BLACK));
@@ -218,5 +221,7 @@ public class ChessMatch {
         placeNewPiece('f' ,7 , new Pawn(board,Color.BLACK));
         placeNewPiece('g' ,7 , new Pawn(board,Color.BLACK));
         placeNewPiece('h' ,7 , new Pawn(board,Color.BLACK));
+        placeNewPiece('f', 8 , new Bishop(board, Color.BLACK));
+        placeNewPiece('c', 8 , new Bishop(board, Color.BLACK));
     }
 }
