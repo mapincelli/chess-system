@@ -207,6 +207,7 @@ public class ChessMatch {
         placeNewPiece('f', 1 , new Bishop(board, Color.WHITE));
         placeNewPiece('b', 1, new Horse(board, Color.WHITE));
         placeNewPiece('g',1, new Horse(board, Color.WHITE));
+        placeNewPiece('d', 1 , new Queen(board, Color.WHITE));
 
         //BLACK side
         placeNewPiece('a' ,8 , new Tower(board,Color.BLACK));
@@ -224,5 +225,6 @@ public class ChessMatch {
         placeNewPiece('c', 8 , new Bishop(board, Color.BLACK));
         placeNewPiece('b', 8 , new Horse(board, Color.BLACK));
         placeNewPiece('g', 8, new Horse(board, Color.BLACK));
+        placeNewPiece('d', 8 , new Queen(board, Color.BLACK));
     }
 }
